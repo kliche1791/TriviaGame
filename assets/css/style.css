@@ -1,0 +1,43 @@
+body{
+    background-image: url(../images/stadium.jpg);
+}
+
+.title{
+    opacity: none;
+    font-family: 'Bungee Shade', cursive;
+    color: red;
+    margin-bottom: 100px;
+}
+.content{ 
+   
+    opacity: 0.9;
+    text-align: center;
+    margin-top: 120px;
+    height: 800px;
+    background-color: white;
+}
+
+.startB{
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 30px;
+    color: black;
+    width: 400px;
+    height: 400px;
+
+}
+
+.timerStyle{
+    font-family: 'Bowlby One SC', cursive;
+}
+.queStyle{
+    display: none;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.buttonAnswer{   
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 30px;
+    color: black;
+    height: 100px;
+    width: 900px;
+}
