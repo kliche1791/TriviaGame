@@ -21,7 +21,7 @@
 ![Screenshot](assets/images/screenshot.jpg)
 
 ### Question
-![Screenshot](assets/images/Question.jpg)
+![Screenshot](assets/images/question.jpg)
 
 ### Correct
 ![Screenshot](assets/images/correct.jpg)
