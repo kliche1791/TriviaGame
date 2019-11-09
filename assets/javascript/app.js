@@ -104,7 +104,7 @@ function timeUp(){
     unanswered ++;
     counter ++;
     time = 30;
-    setTimeout(displayQuestion,3000);
+    setTimeout(resultTrivia,3000);
     
   }
 
@@ -116,9 +116,9 @@ function timeUp(){
 function questionsCon(){
   $(".ButtonQ1").on("click", function() {
     var answer = $(this).attr("value");
-    console.log(answer);
+    console.log("Question1" + counter);
     if(answer === "2"){
-      console.log(answer);
+    console.log(answer);
     clearInterval(intervalId);
     $(questions[counter]).hide();
     $("#ansQues1").show();
@@ -141,7 +141,7 @@ function questionsCon(){
 
     $(".ButtonQ2").on("click", function() {
       var answer = $(this).attr("value");
-      console.log(answer);
+      console.log("Question 2" + counter);
       if(answer === "47"){
         console.log(answer);
       clearInterval(intervalId);
@@ -150,7 +150,7 @@ function questionsCon(){
       correct ++;
       counter ++;
       time = 30;
-      setTimeout(resultTrivia,3000);
+      setTimeout(displayQuestion,3000);
 
   
       } else{
@@ -160,13 +160,167 @@ function questionsCon(){
       wrong ++;
       counter ++;
       time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ3").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 3" + counter);
+      if(answer === "Mind Stone"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues3").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues3").show();
+      wrong ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ4").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 4" + counter);
+      if(answer === "Wasp"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues4").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues4").show();
+      wrong ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ5").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 5" + counter);
+      if(answer === "Cerebro"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues5").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues5").show();
+      wrong ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ6").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 6" + counter);
+      if(answer === "6"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues6").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues6").show();
+      wrong ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ7").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 7" + counter);
+      if(answer === "Mind Stone"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues3").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues3").show();
+      wrong ++;
+      counter ++;
+      time = 30;
+      setTimeout(displayQuestion,3000);
+      }
+
+    });
+
+    $(".ButtonQ3").on("click", function() {
+      var answer = $(this).attr("value");
+      console.log("Question 3" + counter);
+      if(answer === "Mind Stone"){
+        console.log(answer);
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#ansQues3").show();
+      correct ++;
+      counter ++;
+      time = 30;
+      setTimeout(resultTrivia,3000);
+
+  
+      } else{
+      clearInterval(intervalId);
+      $(questions[counter]).hide();
+      $("#incorQues3").show();
+      wrong ++;
+      counter ++;
+      time = 30;
       setTimeout(resultTrivia,3000);
       }
 
-    
-
-
     });
+
 
 }
 
@@ -183,13 +337,12 @@ function resultTrivia(){
 }
 
 function reset(){
+  time = 30;
   counter = 0;
   correct = 0;
   wrong = 0; 
   unanswered = 0;
   $("#results").hide();
-  displayQuestion();
-  questionsCon();
 }
 
 
@@ -201,6 +354,8 @@ $(document).ready(function() {
 
     $("#resetT").on("click", function() {
         reset();
+        displayQuestion();
+        
       });
 
 
